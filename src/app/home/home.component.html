@@ -1,0 +1,54 @@
+<br><br>
+<div class="container-fluid " style="margin: auto;width: 500px;">
+    <label>State  : </label>&nbsp;&nbsp;
+<select  (change)="selectChangeHandler($event)">
+    <option></option>
+    <option *ngFor="let index of result"> {{index.state_id}} {{index.state_name}}</option>
+    <!-- <option *ngFor="let index of result">  {{index.state_id}}</option> -->
+</select>&nbsp;&nbsp;
+
+<br>
+<label>District: </label>&nbsp;
+<select (change)="selectChangeHandler1($event)" style="width: 240px;">
+    <option></option>
+    <option *ngFor="let index of result4.districts " value=" {{index.district_id}}">
+       {{index.district_id}} - {{index.district_name}}
+    </option>
+</select>
+<br><br>
+
+   
+
+    <form [formGroup]="formObj" (ngSubmit)="onSubmit()">
+        <input type="date" class="form-control" formControlName="date"><br>
+        <div class="text-center">
+            <button class="btn btn-primary">submit</button>
+        </div>
+       
+    </form>
+</div>
+<br><br>
+
+
+    <table class="table table-striped">
+        <thead>
+            <th>CenterID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>MinAgeLimit</th>
+            <th>vaccine</th>
+            <th>slot</th>
+           
+        </thead>
+        <tbody>
+            <tr *ngFor="let index of result5.sessions">
+                <td>{{index.center_id}}</td>
+                <td>{{index.name}}</td>
+                <td>{{index.address}}</td>
+                <td>{{index.min_age_limit}}</td>
+                <td>{{index.vaccine}}</td>
+                <td>{{index.slots}}</td>
+                
+            </tr>
+        </tbody>
+        </table>

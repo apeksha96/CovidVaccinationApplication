@@ -1,0 +1,25 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="nav-link navbar-brand text-white"  [routerLink]="''" routerLinkActive="active">Vaccination</a>&nbsp;
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto" style="margin-left: 220px;">
+        <li class="nav-item " style="margin-right: 50px;">
+          <a class="nav-link navbar-brand text-white" [routerLink]="'home'">VaccinationByDistrict </a>
+        </li>
+        <li class="nav-item" style="margin-right: 50px;">
+          <a class="nav-link navbar-brand text-white"[routerLink]="'pincode'">VaccinationByPincode</a>
+        </li>
+        <li class="nav-item" style="margin-right: 50px;">
+          <a class="nav-link navbar-brand text-white"[routerLink]="'location'">VaccinationByLatAndLong</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+
+<router-outlet></router-outlet>
